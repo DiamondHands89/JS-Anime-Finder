@@ -1,6 +1,6 @@
-// pagination.js
-import { fetchAnime } from './api.js';
-import { displayResults } from './search.js';
+// pagination.mjs
+import { fetchAnime } from './api.mjs';
+import { displayResults } from './search.mjs';
 
 async function handlePagination(query, page) {
   try {

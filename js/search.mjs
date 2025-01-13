@@ -1,5 +1,5 @@
-// search.js
-import { fetchAnime } from './api.js';
+// search.mjs
+import { fetchAnime } from './api.mjs';
 
 async function handleSearch(event) {
   event.preventDefault();
@@ -15,7 +15,7 @@ async function handleSearch(event) {
 function displayResults(data) {
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = '';
-  data.data.forEach(anime => {
+  data.forEach(anime => {
     const animeCard = document.createElement('div');
     animeCard.className = 'anime-card';
     animeCard.innerHTML = `
@@ -27,4 +27,4 @@ function displayResults(data) {
   });
 }
 
-export { handleSearch };
+export { handleSearch, displayResults };
